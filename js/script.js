@@ -4,15 +4,10 @@ const listItems = [];
 
 const getData = async () => {
   const res = await fetch("https://randomuser.me/api?results=50");
-
   const { results } = await res.json();
-
-  // Clear result
   result.innerHTML = "";
-
   results.forEach((user) => {
     const li = document.createElement("li");
-
     listItems.push(li);
 
     li.innerHTML = `
